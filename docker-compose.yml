@@ -2,7 +2,7 @@ version: '3'
 services:
   nodejs:
     build: .
-    image: react-cli
-    container_name: react-cli
+    image: setup-env
+    container_name: setup-env
     volumes:
       - .:/app

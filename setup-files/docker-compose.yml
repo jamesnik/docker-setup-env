@@ -1,6 +1,7 @@
-version: '3'
+version: '3.7'
+
 services:
-  client:
+  web-dev:
     stdin_open: true
     build:
       context: .
@@ -12,3 +13,8 @@ services:
       - "./:/app"
     environment:
       - CHOKIDAR_USEPOLLING=true
+  web-prod:
+    container_name: my-app-prod
+    build: .
+    ports:
+      - '1337:80'
