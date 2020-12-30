@@ -8,10 +8,10 @@ WORKDIR /app
 COPY package.json /app
 
 # install npm dependencies
-RUN yarn install
+RUN yarn install # OR `RUN npm install`
 
 # copy your project files to work directory
 COPY . /app
 
 # run your app
-CMD ["yarn", "run", "dev"]
+CMD ["yarn", "run", "dev"] # OR CMD ["npm", "run", "dev"]
